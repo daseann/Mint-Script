@@ -1,0 +1,27 @@
+{
+  "manifest_version": 2,
+  "name": "Coin Script",
+  "description": "For US Mint Site. Made by Dasean.",
+  "version": "1.0",
+  "icons": {"001": "001.png"},
+  "options_page": "options.html",
+  "permissions": [
+    "tabs",
+    "management",
+    "http://*/*",
+    "https://*/*",
+    "activeTab",
+    "storage"
+  ],
+  "content_scripts": [
+    {
+      "matches": [
+        "<all_urls>"
+      ],
+      "js": ["content.js"]
+    }
+  ],
+  "browser_action": {
+    "default_icon": "001.png"
+  }
+}
